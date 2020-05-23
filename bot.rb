@@ -7,12 +7,12 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     when '/pidor@SubllmeBot'
       PHRASES.sample.each do |phrase|
         bot.api.send_message(chat_id: message.chat.id, text: phrase)
-        sleep(2)
+        sleep(1)
       end
     when '/pidoreg@SubllmeBot'
       bot.api.send_message(chat_id: message.chat.id, text: 'Эй, ты уже в игре!')
     when '/pidorall@SubllmeBot'
-      bot.api.send_message(chat_id: message.chat.id, text: "Топ-10 Пидоров за все время:\n1.nanoanna - ∞ раз")
+      bot.api.send_message(chat_id: message.chat.id, text: "Топ-10 Пидоров за все время:\n\n1.nanoanna - ∞ раз")
     end
   end
 end
