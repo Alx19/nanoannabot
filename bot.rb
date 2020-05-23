@@ -4,10 +4,10 @@ require 'telegram/bot'
 Telegram::Bot::Client.run(TOKEN) do |bot|
   bot.listen do |message|
     case message.text
-    when '/pibor@SubllmeBot'
+    when '/pidor@SubllmeBot'
       PHRASES.sample.each do |phrase|
         bot.api.send_message(chat_id: message.chat.id, text: phrase)
-        sleep(1)
+        sleep(2)
       end
     when '/pidoreg@SubllmeBot'
       bot.api.send_message(chat_id: message.chat.id, text: 'Эй, ты уже в игре!')
